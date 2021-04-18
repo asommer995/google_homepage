@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Google Homepage</title>
+        <style>
+        /* General */
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100vh;
+            }
+            html, body {
+                font-family: arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+        /* Heading */
+            .heading-container {
+                background: white;
+                display: flex;
+                justify-content: space-between;
+            }
+            .heading-link-group-one {
+                background: white;
+                display: flex;
+                order: 1;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .heading-link-group-two {
+                background: white;
+                display: flex;
+                order: 2;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .google-apps-button-wrapper {
+                position: relative;
+                display: flex;
+                margin: 10px 10px 0px 22px;
+            }
+            .google-apps-button {
+                background-color: transparent;
+                border: 3px solid white;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                top: -10px;
+                left: -10px;
+            }
+            .google-apps-button:hover {
+                border-color: rgba(128, 128, 128, 0.13);
+                background-color: rgba(128, 128, 128, 0.13);
+                cursor: pointer;
+            }
+            .dots-image {
+                width: 20px;
+            }
+            .google-account-button {
+                background-color: rgb(139, 74, 139);
+                color: white;
+                border: 3px solid white;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+                margin: 10px 10px 0px 10px;
+                text-align: center;
+            }
+            .google-account-button:hover {
+                border-color: rgb(211, 211, 211);
+                cursor: pointer;
+            }
+            .heading-link {
+                margin: 20px 0px 10px 20px;
+                color: black;
+                text-decoration: none;
+                font-size: 14px;
+            }
+            .heading-link:hover {
+                text-decoration: underline;
+            }
+        /* Google Logo and Search Bar */
+            .search-container {
+                background: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .search-bar-wrapper {
+                position: relative;
+                display: flex;
+                width: 60%;
+                margin: 20px;
+            }
+            .search-icon {
+                position: absolute;
+                top: 16px;
+                left: 16px;
+                width: 14px;
+            }
+            .microphone-icon {
+                position: absolute;
+                top: 12px;
+                right: 16px;
+                width: 20px;
+            }
+            .microphone-icon:hover {
+                cursor: pointer;
+            }
+            .search-bar {
+                border: 1px solid rgba(128, 128, 128, 0.288);
+                border-radius: 44px;
+                height: 44px;
+                width: 100%;
+                padding: 0px 40px 0px 40px;
+                outline: 0;
+                background-color: white;
+            }
+            .search-bar:hover {
+                box-shadow: 0 1px 6px rgba(128, 128, 128, 0.315);
+            }
+            .google-search-button {
+                font-size: 15px;
+                background-color: rgba(128, 128, 128, 0.075);
+                border: 0px;
+                border-radius: 5px;
+                padding: 10px;
+                margin: 8px;
+            }
+            .google-search-button:hover {
+                box-shadow: 0 1px 6px rgba(128, 128, 128, 0.315);
+                cursor: pointer;
+            }
+        /* Footing */
+            .footing-container {
+                background: rgba(128, 128, 128, 0.144);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .green-energy-symbol {
+                width: 20px;
+            }
+            .environmental-message {
+                background: transparent;
+                margin: 5px 10px 5px 10px;
+                display: flex;
+                order: 2;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .link-group-one {
+                background: transparent;
+                margin: 5px 10px 5px 10px;
+                display: flex;
+                order: 1;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            .link-group-two {
+                background: transparent;
+                margin: 5px 10px 5px 10px;
+                display: flex;
+                order: 3;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+            .environmental-message-link {
+                margin: 10px 0px 10px 3px;
+                color: rgb(128, 128, 128);
+                text-decoration: none;
+                font-size: 14px;
+            }
+            .environmental-message-link:hover {
+                text-decoration: underline;
+            }
+            .footing-link {
+                margin: 10px;
+                color: rgb(128, 128, 128);
+                text-decoration: none;
+                font-size: 14px;
+            }
+            .footing-link:hover {
+                text-decoration: underline;
+            }
+            @media (max-width: 800px) {
+                .environmental-message {
+                    width: 100%;
+                    order: 0;
+                }
+                .footing-container {
+                    justify-content: space-evenly;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="heading-container">
+                    <div class="heading-link-group-one">
+                        <a class="heading-link" href="#">About</a>
+                        <a class="heading-link" href="#">Store</a>
+                    </div>
+                    <div class="heading-link-group-two">
+                        <a class="heading-link" href="#">Gmail</a>
+                        <a class="heading-link" href="#">Images</a>
+                        <div class="google-apps-button-wrapper">
+                            <button class="google-apps-button"></button>
+                            <img class="dots-image" src="images/dots-menu.png" alt="dots menu">
+                        </div>
+                        <button class="google-account-button">A</button>
+                    </div>
+                </div>
+            </header>
+            <div class="search-container">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="google logo">
+                <div class="search-bar-wrapper">
+                    <img class="search-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDU2Ljk2NiA1Ni45NjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDU2Ljk2NiA1Ni45NjY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMgIHMxMC4zMTgsMjMsMjMsMjNjNC43NjEsMCw5LjI5OC0xLjQzNiwxMy4xNzctNC4xNjJsMTMuNjYxLDE0LjIwOGMwLjU3MSwwLjU5MywxLjMzOSwwLjkyLDIuMTYyLDAuOTIgIGMwLjc3OSwwLDEuNTE4LTAuMjk3LDIuMDc5LTAuODM3QzU2LjI1NSw1NC45ODIsNTYuMjkzLDUzLjA4LDU1LjE0Niw1MS44ODd6IE0yMy45ODQsNmM5LjM3NCwwLDE3LDcuNjI2LDE3LDE3cy03LjYyNiwxNy0xNywxNyAgcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIgZmlsbD0iIzAwMDAwMCIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" alt="search icon">
+                    <input class="search-bar" type="text">
+                    <img class="microphone-icon" src="https://www.flaticon.com/svg/vstatic/svg/709/709682.svg?token=exp=1618420238~hmac=9901b651930f871ba8cf8fc6fd630fd2" alt="microphone icon">
+                </div>
+                <div>
+                    <button class="google-search-button" type="submit">Google Search</button>
+                    <button class="google-search-button" type="submit">I'm Feeling Lucky</button>
+                </div>
+            </div>
+            <footer>
+                    <div class="footing-container">
+                        <div class="environmental-message">
+                            <img class="green-energy-symbol" src="images/green-energy.png" alt="green energy symbol">
+                            <a class="environmental-message-link" href="#">Carbon neutral since 2007</a>
+                        </div>
+                        <div class="link-group-one">
+                            <a class="footing-link" href="#">Advertising</a>
+                            <a class="footing-link" href="#">Business</a>
+                            <a class="footing-link" href="#">How Search Works</a>
+                        </div>
+                        <div class="link-group-two">
+                            <a class="footing-link" href="#">Privacy</a>
+                            <a class="footing-link" href="#">Terms</a>
+                            <a class="footing-link" href="#">Settings</a>
+                        </div>
+                    </div>
+            </footer>
+        </div>
+    </body>
+</html>
